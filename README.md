@@ -1,7 +1,7 @@
 # LARM Simulation WorkSpace
 
 
-## Installation:
+## Installation (RDS):
 
 Create a ROS-Kinetic project on The construct RDS. Then clone this repository in place of `simulation_ws`:
 
@@ -27,9 +27,10 @@ roslaunch turtlebot_gazebo robot_simulation_test.launch
 Don't forget to open Gazebo.
 
 
-## Contribute:
+## Installation (Noetic):
 
-
+To compile On Ubuntu 20.04 - ROS Noetic, you must intall required dependencies : `ros-noetic-pid ros-noetic-joy`.
+However, the turtlebot launch files will not work out of the box.
 
 ## Ressources:
 
