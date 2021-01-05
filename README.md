@@ -7,7 +7,7 @@ Create a ROS-Kinetic project on The construct RDS. Then clone this repository in
 
 ```bash
 rm simulation_ws
-git clone ... simulation_ws
+git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git simulation_ws
 ```
 
 Enter in this new directory `simulation_ws` and build it:
@@ -15,7 +15,21 @@ Enter in this new directory `simulation_ws` and build it:
 ```bash
 cd simulation_ws
 catkin_make
+source devel/setup.bash
 ```
+
+Finally you can test your install by running a simulation launch file:
+
+```bash
+roslaunch turtlebot_gazebo robot_simulation_test.launch
+```
+
+Don't forget to open Gazebo.
+
+
+## Contribute:
+
+
 
 ## Ressources:
 
