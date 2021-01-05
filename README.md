@@ -1,10 +1,20 @@
 # LARM Simulation WorkSpace
 
 
-## tester l'installation:
+## Installation:
+
+Create a ROS-Kinetic project on The construct RDS. Then clone this repository in place of `simulation_ws`:
 
 ```bash
+rm simulation_ws
+git clone ... simulation_ws
+```
 
+Enter in this new directory `simulation_ws` and build it:
+
+```bash
+cd simulation_ws
+catkin_make
 ```
 
 ## Ressources:
