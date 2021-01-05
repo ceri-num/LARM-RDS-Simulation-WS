@@ -6,7 +6,7 @@
 Create a ROS-Kinetic project on The construct RDS. Then clone this repository in place of `simulation_ws`:
 
 ```bash
-rm simulation_ws
+rm -fr simulation_ws
 git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git simulation_ws
 ```
 
