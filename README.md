@@ -16,15 +16,24 @@ Test your install:
 
 ```bash
 roslaunch larm project.launch
-# open gazebo client 
+# open gazebo client
 ```
 
 Don't forget to open Gazebo.
+
+You should see:
+
+![Turtlebot_car](doc/turtlebot_car.png "turtlebot_car robot in Willow garage map")
+
+And this ros graph:
+
+![rosgraph](doc/rosgraph.png)
 
 ## Installation (Noetic):
 
 To compile On Ubuntu 20.04 - ROS Noetic, you must intall required dependencies : `ros-noetic-pid ros-noetic-joy`.
 However, the turtlebot launch files will not work out of the box.
+
 
 ## Ressources
 
