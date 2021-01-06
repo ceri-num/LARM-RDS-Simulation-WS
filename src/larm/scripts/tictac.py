@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rospy
 from std_msgs.msg import String
-from prof import srv
+from larm import srv
 
 # Program parameter:
 rospy.init_node('tictac', anonymous=True)
