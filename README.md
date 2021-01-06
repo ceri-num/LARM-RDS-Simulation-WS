@@ -16,8 +16,16 @@ Test your install:
 
 ```bash
 roslaunch larm project.launch
-# open gazebo client 
+# open gazebo client
 ```
+
+You should see:
+
+![Turtlebot_car](doc/turtlebot_car.png "turtlebot_car robot in Willow garage map")
+
+And this ros graph:
+
+![rosgraph](doc/rosgraph.png)
 
 ## Ressources
 
