@@ -12,11 +12,12 @@ find_package(catkin REQUIRED COMPONENTS
    rospy
    std_msgs
    message_generation
+   gazebo_ros
 )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
+find_package(gazebo REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -108,6 +109,7 @@ catkin_package(
 #  CATKIN_DEPENDS rospy
   CATKIN_DEPENDS message_runtime
 #  DEPENDS system_lib
+  DEPENDS rospy gazebo_ros
 )
 
 ###########

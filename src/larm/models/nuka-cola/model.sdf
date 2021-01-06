@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.4">
+<model name="Nuka-Cola">
+    <static>0</static>
+    <link name="link">
+        <inertial>]
+            <pose>0 0 0 0 0 0</pose>
+            <mass>0.390</mass>
+            <inertia>
+            <ixx>0.00055575</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00055575</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001755</izz>
+            </inertia>
+        </inertial>]
+        <collision name="collision">
+            <pose>0 0 0.15 0 0 0</pose>
+            <geometry>
+                <box><size>0.26 0.25 0.3</size></box>
+            </geometry>
+        </collision>
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://nuka-cola/meshes/nuka-cola.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+    </link>
+  </model>
+</sdf>
