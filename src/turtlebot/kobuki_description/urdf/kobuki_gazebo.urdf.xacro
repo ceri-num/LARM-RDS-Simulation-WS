@@ -184,11 +184,17 @@
 	    <robotBaseFrame>base_footprint</robotBaseFrame>
 	    <publishWheelJointState>true</publishWheelJointState>
 	    <legacyMode>true</legacyMode>
+	    <rosDebugLevel>na</rosDebugLevel>
+	    <publishWheelTF>false</publishWheelTF>
+        <wheelAcceleration>0</wheelAcceleration>
+        <wheelTorque>5</wheelTorque>
+        <odometrySource>world</odometrySource>
+        <publishTf>1</publishTf>
 	  </plugin>
 	</gazebo>
 	
 	<gazebo reference="laser_sensor_link">
-		<sensor type="gpu_ray" name="laser_sensor">
+		<sensor type="ray" name="laser_sensor">
 			<pose>0 0 0 0 0 0</pose>
 			<visualize>false</visualize>
 			<update_rate>40</update_rate>
@@ -212,7 +218,7 @@
 					<stddev>0.01</stddev>
 				</noise>
 			</ray>
-			<plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
+			<plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
 				<topicName>/kobuki/laser/scan</topicName>
 				<frameName>laser_sensor_link</frameName>
 			</plugin>
