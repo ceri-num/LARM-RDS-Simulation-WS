@@ -5,11 +5,19 @@
     <arg name="world_file" value="worlds/empty.world" />
   </include>
 
-  <!---include file="$(find turtlebot_gazebo)/launch/put_robot_in_world.launch">
-  </include-->
+  <node name="SpawnerWallN" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wallN -x 10.3 -y 0.0 -Y 1.57" />
+  <node name="SpawnerWallS" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wallS -x -10.3 -y 0.0 -Y 1.57" />
+  <node name="SpawnerWallE" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wallE -x 0.0 -y 10.3" />
+  <node name="SpawnerWallW" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wallW -x 0.0 -y -10.3" />
 
-  <node name="Spawner1" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wall1 -x 3.0 -y 5.0" />
-  <node name="Spawner2" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wall2 -x 5.0 -y -3.0 -Y 1.54" />
-  <node name="Spawner3" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/wall/model.sdf -sdf -model wall3 -x -5.0 -y -5.0 -Y -0.8" />
+  <node name="SpawnerObs1" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/obstacle1/model.sdf -sdf -model Obs1 -x -2.0 -y -2.0 -Y -0.8" />
+
+  <include file="$(find larm)/launch/spawn_robot.launch">
+	<arg name="x" value="-3.32" />
+	<arg name="y" value="-2.95" />
+	<arg name="yaw" value="2.86" />
+  </include>
+
   <node name="Spawner4" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/nuka-cola/model.sdf -sdf -model bottle1 -x 2.0 -y 2.0" />
+
 </launch>

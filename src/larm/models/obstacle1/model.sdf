@@ -2,11 +2,11 @@
 <model name="brick_box_3x1x3">
     <static>1</static>
     <link name="chassis">
-      <pose frame="">0 0 1.5 0 0 0</pose>
+      <pose frame="">0 0 0.5 0 0 0</pose>
       <collision name="collision">
         <geometry>
           <box>
-            <size>20 0.5 3</size>
+            <size>2 0.5 1</size>
           </box>
         </geometry>
         <max_contacts>10</max_contacts>
@@ -22,17 +22,15 @@
       </collision>
       <visual name="visual">
         <geometry>
-          <mesh>
-            <uri>model://brick_box_3x1x3/meshes/simple_box.dae</uri>
-            <scale>20 0.5 3</scale>
-          </mesh>
+          <box>
+            <size>2 0.5 1</size>
+          </box>
         </geometry>
         <material>
-          <script>
-            <uri>model://brick_box_3x1x3/materials/scripts</uri>
-            <uri>model://brick_box_3x1x3/materials/textures</uri>
-            <name>BrickBox/Diffuse</name>
-          </script>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.2 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
         </material>
       </visual>
       <velocity_decay>
