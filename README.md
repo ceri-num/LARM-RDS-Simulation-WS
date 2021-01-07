@@ -30,3 +30,7 @@ And this ros graph:
 
 ![rosgraph](doc/rosgraph.png)
 
+## Next...
+
+You can now, clone your own workspace in `catkin_ws` directory and develope your control solution.
+
