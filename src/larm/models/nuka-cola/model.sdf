@@ -27,6 +27,12 @@
                 <uri>model://nuka-cola/meshes/nuka-cola.dae</uri>
             </mesh>
             </geometry>
+            <material>
+                <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/Orange</name>
+            </script>
+        </material>
         </visual>
     </link>
   </model>
