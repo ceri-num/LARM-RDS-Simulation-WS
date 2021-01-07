@@ -15,7 +15,7 @@ source devel/setup.bash
 Test your install:
 
 ```bash
-roslaunch larm project.launch
+roslaunch larm large_world.launch
 # open gazebo client
 ```
 
