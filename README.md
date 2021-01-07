@@ -29,10 +29,3 @@ And this ros graph:
 
 ![rosgraph](doc/rosgraph.png)
 
-
-## Ressources
-
-- Initial turtlebot [repo](https://aezquerro@bitbucket.org/theconstructcore/turtlebot.git)
-    Removed the heavy `turtlebot_rtab` package
-- Initial hokuyo [repo](https://bitbucket.org/theconstructcore/hokuyo_model.git)
-
