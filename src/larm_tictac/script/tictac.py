@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
 from larm_tictac import srv
