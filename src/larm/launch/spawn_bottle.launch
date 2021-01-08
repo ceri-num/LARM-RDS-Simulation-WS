@@ -1,0 +1,11 @@
+<launch>
+	<arg name="name" default="b20" />
+	<arg name="x" default="3.0" />
+	<arg name="y" default="3.5" />
+	<arg name="z" default="0.0" />
+	<arg name="roll" default="0.0"/>
+	<arg name="pitch" default="0.0"/>
+	<arg name="yaw" default="0.0"/>
+
+<node name="Spawner4" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/nuka-cola/model.sdf -sdf -model $(arg name) -x $(arg x) -y $(arg y)" />
+</launch>
