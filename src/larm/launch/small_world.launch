@@ -18,6 +18,10 @@
 	  <arg name="yaw" value="2.86" />
   </include-->
 
-  <node name="Spawner4" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(find larm)/models/nuka-cola/model.sdf -sdf -model bottle1 -x 2.0 -y 2.0" />
+  <include file="$(find larm)/launch/spawn_bottle.launch">
+	  <arg name="name" value="b1" />
+      <arg name="x" value="2.5" />
+      <arg name="y" value="2.5" />
+  </include>
 
 </launch>
