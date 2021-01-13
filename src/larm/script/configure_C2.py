@@ -8,13 +8,15 @@ poses= [[2.21479, 1.57095, -0.003171, -0.053354, -0.007227, -0.000762],
 [-5.60945, 8.72727, -0.002659, -0.055112, 0.007741, -0.000483],
 [1.36778, 1.63692, -0.003211, -0.051075, -0.00482, -0.000771]]
 
+i= 1
 for p in poses :
     cmd= 'rosrun gazebo_ros spawn_model -file `rospack find larm`/models/coke_can/model.sdf -sdf'
-    cmd+= ' -x '+ str( poses[i][0] )
-    cmd+= ' -y '+ str( poses[i][1] )
-    cmd+= ' -z '+ str( poses[i][2] )
-    cmd+= ' -R '+ str( poses[i][3] )
-    cmd+= ' -P '+ str( poses[i][4] )
-    cmd+= ' -Y '+ str( poses[i][5] )
-    cmd+= ' -model coke_can_'+ str(i)   
+    cmd+= ' -x '+ str( p[0] )
+    cmd+= ' -y '+ str( p[1] )
+    cmd+= ' -z '+ str( p[2] )
+    cmd+= ' -R '+ str( p[3] )
+    cmd+= ' -P '+ str( p[4] )
+    cmd+= ' -Y '+ str( p[5] )
+    cmd+= ' -model coke_can_'+ str(i)
+    i+= 1 
     os.system(cmd)

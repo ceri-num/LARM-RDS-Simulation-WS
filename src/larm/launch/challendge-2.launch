@@ -11,4 +11,5 @@
         <arg name="yaw" value="0.0" />
     </include>
 
+    <node name="config" pkg="larm" type="configure_C2.py" />
 </launch>
