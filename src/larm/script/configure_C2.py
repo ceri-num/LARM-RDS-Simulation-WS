@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 import os, random
 
 poses= [[2.21479, 1.57095, -0.003171, -0.053354, -0.007227, -0.000762],
