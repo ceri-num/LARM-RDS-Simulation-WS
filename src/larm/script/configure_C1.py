@@ -1,4 +1,4 @@
-#!/bin/env python
+nnv python
 import os
 
 # nothing to do...
