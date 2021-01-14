@@ -18,10 +18,4 @@
 	  <arg name="yaw" value="2.86" />
   </include-->
 
-  <include file="$(find larm)/launch/spawn_bottle.launch">
-	  <arg name="name" value="b1" />
-      <arg name="x" value="2.5" />
-      <arg name="y" value="2.5" />
-  </include>
-
 </launch>

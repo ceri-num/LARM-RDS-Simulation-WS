@@ -3,8 +3,9 @@ import os, random
 
 # Random pose of X cans close to the start position. 
 number= 12
+model_name= "can"
 labels= ['x','y','z','R','P','Y']
-noise= [0.5, 0.5, 0, 0, 0, 3.14]
+noise= [0.3, 0.3, 0, 0, 0, 3.14]
 fall= [0, 0, 0.04, 0, 0, 0]
 
 def repose(pose) :
@@ -14,13 +15,13 @@ def repose(pose) :
         new_pose[i]+= pose[i]
 
     # Fall or up-side-down
-    if random.random() > 0.5 :
-        new_pose[3]= 1.2  # roll, set on the ground.
-        new_pose[2]= 0.04 # z, corection.
+    if random.random() < 0.5 :
+        new_pose[3]= 1.5708  # roll, set on the ground.
+        new_pose[2]= 0.05 # z, corection.
         new_pose[4]= random.uniform(-3.14, 3.14) # Pith, random orientation 
-    elif random.random() > 0.25 :
-        new_pose[3]= 3.14  # roll, set on the ground.
-        new_pose[2]= 0.122 # z, corection.
+    elif random.random() < 0.25 :
+        new_pose[3]= 3.1416  # roll, set on the ground.
+        new_pose[2]= 0.13 # z, corection.
 
     return new_pose
 
@@ -270,4 +271,6 @@ random.shuffle(poses)
 
 print( "Spawn "+ str(number) + " cans over "+ str(len(poses)) )
 for i in range( number ) :
-        spawn( repose(poses[i]), 'coke_can_'+ str(i+201))
+    p= repose(poses[i])
+    print( "Spawn at "+ str(p) )
+    spawn( p, model_name+'_'+ str(i+1) )
