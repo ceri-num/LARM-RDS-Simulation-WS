@@ -5,11 +5,13 @@
 		<arg name="world_file" value="worlds/willowgarage.world" />
 	</include>
 
+<!-- 
     <include file="$(find larm)/launch/spawn_robot.launch">
         <arg name="x" value="0.0" />
         <arg name="y" value="0.0" />
         <arg name="yaw" value="0.0" />
     </include>
+-->
 
     <node name="config" pkg="larm" type="configure_C3.py" />
 </launch>

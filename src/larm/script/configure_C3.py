@@ -26,6 +26,7 @@ def repose(pose) :
     return new_pose
 
 def spawn(pose, name) :
+    print( "Spawn '"+ name +"' at "+ str(pose) )
     cmd= 'rosrun gazebo_ros spawn_model -file `rospack find larm`/models/coke_can/model.sdf -sdf'
     for label, value in zip(labels, pose) :
         cmd+= ' -'+ label +' '+ str(value)
@@ -272,5 +273,4 @@ random.shuffle(poses)
 print( "Spawn "+ str(number) + " cans over "+ str(len(poses)) )
 for i in range( number ) :
     p= repose(poses[i])
-    print( "Spawn at "+ str(p) )
     spawn( p, model_name+'_'+ str(i+1) )

@@ -2,7 +2,7 @@
 import sys, re
 from bs4 import BeautifulSoup
 
-model= 'coke_can'
+model= 'brick_box_3x1x3'
 model_pattern = re.compile(r'^'+model)
 
 print('open '+ sys.argv[1])
