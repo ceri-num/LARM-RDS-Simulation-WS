@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 import os, random
 
 # Random pose of X cans close to the start position. 
