@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import os, random
 
 # Random pose of X cans close to the start position. 
@@ -6,7 +6,6 @@ number= 12
 model_name= "can"
 labels= ['x','y','z','R','P','Y']
 noise= [0.3, 0.3, 0, 0, 0, 3.14]
-fall= [0, 0, 0.04, 0, 0, 0]
 
 def repose(pose) :
     # Noise
