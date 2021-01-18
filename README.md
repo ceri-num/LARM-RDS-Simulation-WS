@@ -2,7 +2,7 @@
 
 ## Installation (RDS)
 
-1. Create a ROS-Melodic ROSjet on The construct RDS.
+1. Create a ROS-Kinetic ROSjet on The construct RDS.
 2. Clone and build this project in place of the initial `simulation_ws` directory. So, in RDS the terminal :
 
 ```bash
