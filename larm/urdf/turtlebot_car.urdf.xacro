@@ -4,7 +4,7 @@
     - Stacks    : hexagons
     - 3d Sensor : asus xtion pro
     - hokuyo
--->    
+-->
 <robot name="turtlebot" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- General -->
@@ -17,7 +17,7 @@
   <!-- 3D Sensors -->
   <xacro:include filename="$(find kobuki_description)/urdf/sensors/kinect.urdf.xacro"/>
   <xacro:include filename="$(find kobuki_description)/urdf/sensors/asus_xtion_pro.urdf.xacro"/>
-  
+
   <kobuki_car/>
   <stack_hexagons                 parent="base_link"/>
   <sensor_asus_xtion_pro          parent="base_link"/>

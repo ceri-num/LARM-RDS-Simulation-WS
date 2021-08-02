@@ -10,7 +10,7 @@
 	    <minDepth>0.001</minDepth>
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
-	
+
 	  <gazebo reference="wheel_right_link">
 	    <mu1>1.0</mu1>
 	    <mu2>1.0</mu2>
@@ -19,7 +19,7 @@
 	    <minDepth>0.001</minDepth>
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
-	  
+
 	  <gazebo reference="caster_front_link">
 	    <mu1>0.0</mu1>
 	    <mu2>0.0</mu2>
@@ -28,7 +28,7 @@
 	    <minDepth>0.001</minDepth>
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
-	  
+
 	  <gazebo reference="caster_back_link">
 	    <mu1>0.0</mu1>
 	    <mu2>0.0</mu2>
@@ -37,7 +37,7 @@
 	    <minDepth>0.001</minDepth>
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
-	  
+
 	  <gazebo reference="base_link">
 	    <mu1>0.3</mu1>
 	    <mu2>0.3</mu2>
@@ -50,7 +50,7 @@
 	      </contact>
 	    </sensor>
 	  </gazebo>
-	
+
 	  <gazebo reference="cliff_sensor_left_link">
 	    <sensor type="ray" name="cliff_sensor_left">
 	      <always_on>true</always_on>
@@ -81,7 +81,7 @@
 	      </ray>
 	    </sensor>
 	  </gazebo>
-	
+
 	  <gazebo reference="cliff_sensor_right_link">
 	    <sensor type="ray" name="cliff_sensor_right">
 	      <always_on>true</always_on>
@@ -112,7 +112,7 @@
 	      </ray>
 	    </sensor>
 	  </gazebo>
-	
+
 	  <gazebo reference="cliff_sensor_front_link">
 	    <sensor type="ray" name="cliff_sensor_front">
 	      <always_on>true</always_on>
@@ -143,7 +143,7 @@
 	      </ray>
 	    </sensor>
 	  </gazebo>
-	
+
 	  <gazebo reference="gyro_link">
 	   <sensor type="imu" name="imu">
         <always_on>true</always_on>
@@ -173,8 +173,8 @@
          <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 	    <alwaysOn>true</alwaysOn>
 	    <updateRate>20</updateRate>
-	    <leftJoint>wheel_right_joint</leftJoint>
-    	    <rightJoint>wheel_left_joint</rightJoint>
+	    <leftJoint>wheel_left_joint</leftJoint>
+    	    <rightJoint>wheel_right_joint</rightJoint>
 	    <wheelSeparation>.230</wheelSeparation>
 	    <wheelDiameter>0.070</wheelDiameter>
 	    <torque>1.0</torque>
@@ -190,9 +190,10 @@
         <wheelTorque>5</wheelTorque>
         <odometrySource>world</odometrySource>
         <publishTf>1</publishTf>
+
 	  </plugin>
 	</gazebo>
-	
+
 	<gazebo reference="laser_sensor_link">
 		<sensor type="ray" name="laser_sensor">
 			<pose>0 0 0 0 0 0</pose>

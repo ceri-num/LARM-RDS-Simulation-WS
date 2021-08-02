@@ -1,27 +1,33 @@
-# LARM Simulation WorkSpace
+# LARM Turtlebot2
 
-## Installation (RDS)
+Melodic dependencies:
 
-1. Create a ROS-Kinetic ROSjet on The construct RDS.
-2. Clone and build this project in place of the initial `simulation_ws` directory. So, in RDS the terminal :
+```
+sudo apt install ros-melodic-teleop-twist-joy ros-melodic-joy ros-melodic-pid
+```
 
-```bash
-rm -fr simulation_ws
-git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git simulation_ws
-cd simulation_ws
+# How to install
+
+```
+cd <catkin_ws>/src
+git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git larm_turtlebot2
+cd ..
 catkin_make
 source devel/setup.bash
 ```
+
+# How to use
+
 
 Test your install:
 
 ```bash
 roslaunch larm test.launch
 # open gazebo client
+
+# if xbox controller
+roslaunch larm teleop_xbox.launch
 ```
-
-Don't forget to open Gazebo.
-
 You should see:
 
 ![Turtlebot_car](doc/turtlebot_car.png "turtlebot_car robot in Willow garage map")
