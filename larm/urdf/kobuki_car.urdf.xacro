@@ -37,7 +37,7 @@
         </geometry>
         <origin xyz="0.001 0 0.05199" rpy="0 0 0"/>
       </visual>
-      <collision>
+      <collision name="base">
         <geometry>
           <cylinder length="0.10938" radius="0.178"/>
         </geometry>
@@ -75,7 +75,7 @@
       </visual>
       <collision>
         <geometry>
-          <cylinder length="0.0206" radius="0.0352"/>
+          <cylinder length="0.0206" radius="0.035"/>
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0"/>
       </collision>
@@ -103,7 +103,7 @@
       </visual>
       <collision>
         <geometry>
-          <cylinder length="0.0206" radius="0.0350"/>
+          <cylinder length="0.0206" radius="0.035"/>
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0"/>
       </collision>
@@ -247,7 +247,7 @@
     </link>
     
     <!-- Kobuki Gazebo simulation details -->
-    <kobuki_sim/>
+    <xacro:kobuki_sim/>
     
   </xacro:macro>
 </robot>
